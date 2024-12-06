@@ -91,5 +91,14 @@ First, I used this automated solving function in the scipy library that are avai
 ```py
 from scipy.optimize import minimize
 ```
+This is handeld in the following class in the main : 
+```py
+from auto_SQP_classe import Auto_SQP
+```
 
 ## Manual Implementation of the SQP Algorithm
+They both are in those classes in the main : 
+```py
+from hand_made_SQP_classe import Hand_Made_SQP
+from hand_made_SQP_classe_with_constraints_changes import Hand_Made_SQP_Classe_with_Constraints_Changed
+```
