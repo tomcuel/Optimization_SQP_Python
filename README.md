@@ -21,9 +21,26 @@ Optimization_SQP_Python/
 ```
 
 ## Virtual Environnment
+Since the libraries are not installed on my Mac, I need to set up a virtual environment to access and use the required libraries, here is how to do :
+Creating the virtual environnment
+```
+python3 -m venv path/to/venv
+```
+Activating the virtual environnment
+```
+source path/to/venv/bin/activate
+```
+Downloading the librairies you need in the virtual environnment
+```
+python3 -m pip install what_you_need
+```
+To temporarly deactivate the virtual environnment
+```
+deactivate 
+```
 
 ## Librairies
-I utilized Python libraries to automate the differentiation of mathematical expressions, eliminating the need for manual computation.
+I utilized Python libraries to automate the differentiation of mathematical expressions, eliminating the need for manual computation : 
 ```py
 from sympy import symbols, diff, lambdify, exp
 ```
@@ -69,7 +86,7 @@ Derivative evaluated at [1, 2, 3, 4, 5]: 1.920340573300732
 ```
 
 ## Auto Solving
-First, I used this automated solving function in the scipy library that are available in Python
+First, I used this automated solving function in the scipy library that are available in Python : 
 ```py
 from scipy.optimize import minimize
 ```
