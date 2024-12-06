@@ -17,7 +17,46 @@ I utilized Python libraries to automate the differentiation of mathematical expr
 ```py
 from sympy import symbols, diff, lambdify, exp
 ```
+For example, here is a use case : 
+```py
+from sympy import symbols, sin, exp, log, diff, lambdify
 
+# Define a list of variables
+n = 5  # Number of variables
+variables = symbols(f'x0:{n}')  # Creates x0, x1, ..., x(n-1)
+
+# Define a more complex function involving these variables
+# For example: f(x0, x1, x2, ...) = x0^2 + sin(x1*x2) + exp(x3) * log(x4)
+f = variables[0]**2 + sin(variables[1] * variables[2]) + exp(variables[3]) * log(variables[4])
+
+# Index of the variable to differentiate with respect to
+i = 2  # Example: differentiate with respect to x2
+
+# Compute the derivative
+f_derivative = diff(f, variables[i])
+
+# Convert the original function and its derivative into lambdified functions
+f_lambdified = lambdify(variables, f)  # Converts f into a callable function
+f_derivative_lambdified = lambdify(variables, f_derivative)  # Converts the derivative
+
+# Example: Evaluate the function and its derivative at a specific point
+point = [1, 2, 3, 4, 5]  # Replace with your desired values for x0, x1, ..., x(n-1)
+
+f_value = f_lambdified(*point)
+f_derivative_value = f_derivative_lambdified(*point)
+
+print(f"Original Function: {f}")
+print(f"Derivative with respect to variable at index {i} ({variables[i]}): {f_derivative}")
+print(f"Function evaluated at {point}: {f_value}")
+print(f"Derivative evaluated at {point}: {f_derivative_value}")
+```
+and it returns : 
+`
+Original Function: x0**2 + exp(x3)*log(x4) + sin(x1*x2)
+Derivative with respect to variable at index 2 (x2): x1*cos(x1*x2)
+Function evaluated at [1, 2, 3, 4, 5]: 88.59291711390853
+Derivative evaluated at [1, 2, 3, 4, 5]: 1.920340573300732
+`
 
 ## Auto Solving
 ```py
