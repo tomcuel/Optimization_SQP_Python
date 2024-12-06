@@ -51,12 +51,12 @@ print(f"Function evaluated at {point}: {f_value}")
 print(f"Derivative evaluated at {point}: {f_derivative_value}")
 ```
 and it returns : 
-`
+```
 Original Function: x0**2 + exp(x3)*log(x4) + sin(x1*x2)
 Derivative with respect to variable at index 2 (x2): x1*cos(x1*x2)
 Function evaluated at [1, 2, 3, 4, 5]: 88.59291711390853
 Derivative evaluated at [1, 2, 3, 4, 5]: 1.920340573300732
-`
+```
 
 ## Auto Solving
 ```py
