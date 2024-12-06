@@ -22,6 +22,7 @@ Optimization_SQP_Python/
 
 ## Virtual Environnment
 Since the libraries are not installed on my Mac, I need to set up a virtual environment to access and use the required libraries, here is how to do :
+
 Creating the virtual environnment
 ```
 python3 -m venv path/to/venv
