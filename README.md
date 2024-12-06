@@ -9,6 +9,16 @@
 * [Manual Implementation of the SQP Algorithm](#manual-implementation-of-the-SQP-algorithm)
 
 ## Path Tree
+```
+Optimization_SQP_Python/
+├── auto_SQP_classe.py                                          # creating a class that solve automatically the problem
+│
+├── hand_made_SQP_classe.py                                     # creating a class using the manuel SQP implementation
+│
+├── hand_made_SQP_classe_with_constraints_changes.py            # creating a class using the manuel SQP using simplifcation for the implementation
+│
+└── main.py                                                     # main of the project where everything is linked to be able to make some tests
+```
 
 ## Virtual Environnment
 
@@ -17,7 +27,7 @@ I utilized Python libraries to automate the differentiation of mathematical expr
 ```py
 from sympy import symbols, diff, lambdify, exp
 ```
-For example, here is a use case : 
+For example, here is a use case, where variables become symbols, then there is a derivation and the function is reevaluated so it works as intented for a function, and not as a symbolic expression you can't evaluate : 
 ```py
 from sympy import symbols, sin, exp, log, diff, lambdify
 
@@ -59,9 +69,9 @@ Derivative evaluated at [1, 2, 3, 4, 5]: 1.920340573300732
 ```
 
 ## Auto Solving
+First, I used thos automated solving librairies that are available in Python
 ```py
 from scipy.optimize import minimize
 ```
-
 
 ## Manual Implementation of the SQP Algorithm
