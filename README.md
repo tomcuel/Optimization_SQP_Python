@@ -69,7 +69,7 @@ Derivative evaluated at [1, 2, 3, 4, 5]: 1.920340573300732
 ```
 
 ## Auto Solving
-First, I used thos automated solving librairies that are available in Python
+First, I used this automated solving function in the scipy library that are available in Python
 ```py
 from scipy.optimize import minimize
 ```
